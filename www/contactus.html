@@ -1,0 +1,244 @@
+﻿<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>     ADA Australian Design Architects     </title>
+  
+  <meta name="Trang" content="      meijinguyen2512@gmail.com     ">
+
+  <link rel="stylesheet" href="aboutus.css">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Limelight' rel='stylesheet'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+<script>
+/*I done question number 1: validate the form on your contact page. Form validation used to occur at the server, after client entered all the data and press the submit button, if the data entered was incorrect or was missing, the server would have send data back to the client and request the form be resubmitted. the form must be checked to make sure all the field are filled in. if a form field is empty, this function alerts a message, and return false. /* i done question number2: confirm dialog box. confirm() method display a dialog box that along with an OK or Cancel button. true, the user click ok, false, user click Cancel */
+
+
+function submitIt(myForm) {
+var re=/^\w+\s\w+$/
+var re2 = /^\w+([\._-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+var re3=/^\d{3,7}$/
+
+		
+			if(!re.test(myForm.nameBoth.value)){
+		alert("lastname please");
+		return false;
+	}
+			
+
+		
+			if (!re2.test(myForm.emailAddr.value)) {
+				alert("Invalid email address");
+				myForm.emailAddr.focus();
+				myForm.emailAddr.select();
+				return false;
+			}
+			
+				
+		
+			
+			
+			if(!re3.test(myForm.digits.value)){
+		alert("between 3 and 7 numbers only");
+		return false;
+	}
+		var txt;
+	var name = myForm.nameBoth.value;
+	var email = myForm.emailAddr.value;
+	var phone = myForm.digits.value; 
+    if (confirm("Please confirm your details: " +"\n"+ name + "\n"+  email +"\n"+  phone)) {
+        txt = "You pressed OK!";
+		alert("Thanks. Enjoy the website!");
+				
+    } 
+	else {
+        txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;		
+		}
+		
+</script>
+
+
+
+
+</head>
+
+
+<body id="contact">
+
+<div class="main-container">
+        <header>
+            <div class="logo">
+                <img src="images/ADAlogo.png" alt="GMC" /> </div>
+            <nav>
+                <ul>
+				
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="awards.html">AWARDS</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">CONTACT US</a>
+                    </li>
+					<li>
+                        <a id='login' href="LogIn.html">LOG IN</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+</div>
+
+
+<main id="ContactUsPage">
+
+<div class="hero-image">
+
+<div id="hero-text">
+<section>
+<h1>Contact Us Today!</h1>
+<div class="column-container">
+<form onsubmit="return submitIt(this)" action="#" id="myform">
+<p>NAME:<input type="text" name="nameBoth" id="nameBoth">
+
+<p>EMAIL ADDRESS:<input type="text" name="emailAddr" id="email"></p>
+<p>PHONE NUMBER:<input type="text" name="digits" id="phone"></p>
+<p><input type="submit" name="send" id="send" value="send"></p>
+
+</form>
+
+</body>
+
+</div>
+</section>
+<aside class="message">
+<p>Our helpful Team can dicuss any ideas. If you have any ideas, don't worry, we can help you</p>
+<p>Address: 9 York Street, Sydney</p>
+<p>Phone: 9215 1234 </p>
+<p>Email: info@ada.com.au</p>
+</aside>
+</div>
+</div>
+
+	<div class="google-maps">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.9648038040605!2d151.2031590148251!3d-33.864797926281796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae4124333c4b%3A0xacc0faaf9219d35c!2s9+York+St%2C+Sydney+NSW+2000!5e0!3m2!1sen!2sau!4v1509790776909" width="600" height="450"  style="border:0" allowfullscreen></iframe>
+	</div>
+	
+</main>
+<footer>
+        <div id="footer1">
+            <aside id="footer-left">
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="ADA.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="awards.html">AWARDS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+					
+					
+                </ul>
+            </aside>
+            <aside id="footer-center">
+                <h3>Customer Reviews</h3>
+                <div class="rating">
+                    <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+					</div>
+				<canvas id="newCanvas" width="300" height="300">
+<img src="images/bubbles.png" width="150" height="150" alt=""/>
+</canvas>			
+            </aside>
+            <aside id="footer-right">
+                <h3>GETTING SOCIAL</h3>
+                <ul class="contact">
+                    <li><a href="https://plus.google.com/discover"><img src="images/google-plus.png" alt="google-plus" width="34" height="34"></a></li>
+                    <li><a href="https://twitter.com/Twitter"><img src="images/twitter.png" alt="twitter" width="34" height="34"></a></li>
+                    <li><a href="twitter.com"><img src="images/pinterest.png" alt="pinterest" width="34" height="34"></a></li>
+                </ul>
+            </aside>
+        </div>
+        <div id="footer2">
+            Copyright &copy; 2017 ADA Australian Design Architects
+            <div class="privacyfooter">
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+<script>
+var canvas = document.getElementById('newCanvas');
+var stage = new createjs.Stage(canvas);
+					img = new Image ();
+					img.src = 'images/bubbles.png' ;
+					img.onload = function (event){
+					var data = {
+					framerate:10,
+					images: [img],
+					frames: {width:64, height:64, regX:32, regY:32},
+					animations: {
+					'explode': [0, 10],
+					}
+					}
+					var spritesheet = new createjs.SpriteSheet(data);
+					var animation = new createjs.Sprite(spritesheet, 'explode');
+					animation.x = canvas.width/2;
+					animation.y = canvas.height/2;
+					stage.addChild(animation);
+					createjs.Ticker.addEventListener("tick", update);
+					function update(event){
+					stage.update();
+					}
+					}
+					</script>
+					
+					
+		<script type="text/javascript">
+		/*window.onload function use to perform task when the page finished loading, displaying a page to user input field as soon as the page is loaded, automatic fill out enquiry name after user logged in, function that return the value of specified cookie  */
+window.onload = function() {
+         var nameBoth = document.getElementById('nameBoth');
+        var name = getCookie('welcomeuser');
+        if (name != null && name != '') {
+           
+            nameBoth.value  = name;
+			
+		};
+		
+		
+         }      
+            
+
+function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie.indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return "";
+    }
+</script>
+</body>
+</html> 
+
+

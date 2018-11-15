@@ -1,0 +1,227 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> ADA Australian Design Architects </title>
+    <meta name="Trang" content="      ADD YOUR NAME AND YOUR EMAIL ADDRESS HERE     ">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <span id="cookieSpan"></span>
+    <div class="main-container">
+        <header>
+            <div class="logo">
+                <img src="images/ADAlogo.png" width="212" height="114" alt="GMC" /> </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id='welcome'></a>
+                    </li>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="shop.html">SHOP</a>
+                    </li>
+                    <li>
+                        <a href="topic.html">CREATE TOPIC</a>
+                    </li>
+					<li>
+                        <a href="category.php">CREATE CATEGORY</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">CONTACT US</a>
+                    </li>
+                    <li>
+                        <a id='login' href="LogIn.html">LOG IN</a>
+                    </li>
+                </ul>
+            </nav>
+			
+        </header>
+        <main>
+            <div class="slideshow">
+                <div class="mySlides fade">
+                    <img src="images/photo1.jpeg" alt="photo1" style="width:100%" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/photo2.jpg" alt="photo2" style="width:100%" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/photo3.jpeg" alt="photo3" style="width:100%" />
+                </div>
+                <div class="mySlides fade">
+                    <img src="images/photo4.jpeg" alt="photo4" style="width:100%">
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            </script>
+            <section class="welcome-message">
+                <h1>WELCOME TO OUR ADA AUSTRALIAN SHOPPING ONLINE</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type </p>
+                <a href="AboutUs.html" class="read-more">Read More &#8594;</a>
+            </section>
+            <div id="imageswrapper">
+                <aside>
+                    <img src="images/18photo.jpg" width="300" height="202" alt="" />
+                    <h2>Australian Design Architects</h2>
+                    <p>
+                        Australian Design Architects is a team of multi-award winning architects based in Sydney, Australia. We specialise in residential and commercial projects of high-quality finishes and details that are sensitive to context and the brief. Our distinctive style is known for its classic proportion and geometric form.</p>
+                </aside>
+                <aside>
+                    <img src="images/11photo.jpg" width="300" height="202" alt="" />
+                    <h2>We Work With You</h2>
+                    <p>
+                        We enjoy using unexpected materials that challenge and surprise. We also believe that good architecture and respect for the environment go hand in hand. Working with your ideas, we can nurture your project from conception to completion. Our innovative and inter-disciplinary skill-set, and extensive network of suppliers, means we can take a project from the first sketch right through to construction.</p>
+                    <br/><a href="contactus.html" class="read-more no-bg">Read More &#8594;</a>
+                </aside>
+                <aside>
+                    <img src="images/4photo.jpg" width="300" height="202" alt="" />
+                    <h2>Achievements</h2>
+                    <p>
+                        Over the last 2 decades our extensive portfolio of residential and commercial projects has been recognised by our peers including the Royal Australian Institute of Architects, the Institute of Interior Designers and the Australian Design Council.
+                        <br/><a href="Awards.html" class="read-more no-bg">Read More &#8594;</a> </p>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div id="footer1">
+            <aside id="footer-left">
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="ADA.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="awards.html">AWARDS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+                </ul>
+            </aside>
+            <aside id="footer-center">
+                <h3>Customer Reviews</h3>
+                <div class="rating">
+                    <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+                </div>
+				<canvas id="newCanvas" width="300" height="300">
+<img src="images/bubbles.png" width="150" height="150" alt=""/>
+</canvas>			
+            </aside>
+            <aside id="footer-right">
+                <h3>GETTING SOCIAL</h3>
+                <ul class="contact">
+                    <li><a href="https://plus.google.com/discover"><img src="images/google-plus.png" alt="google-plus" width="34" height="34"></a></li>
+                    <li><a href="https://twitter.com/Twitter"><img src="images/twitter.png" alt="twitter" width="34" height="34"></a></li>
+                    <li><a href="twitter.com"><img src="images/pinterest.png" alt="pinterest" width="34" height="34"></a></li>
+                </ul>
+            </aside>
+        </div>
+        <div id="footer2">
+            Copyright &copy; 2017 ADA Australian Design Architects
+            <div class="privacyfooter">
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+	
+	<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+<script>
+/* 
+	I done question number 8. On any part of your site, insert a canvas element and apply an appropriate animation or graphic. here is the comments in my code. 
+	Canvas allow user to draw graphic using javascript. Using The SpriteSheet objects required size of each frame, sequence of animation. Create a new Image() object and then set its scr property to the filename of the image that will load the image. After that create a sprite object that we call spritesheet, the context of the canvas on which the sprite will be drawn dimensions, the sprite sheet image. We need a method that we can update the position of the sprite sheet. */
+var canvas = document.getElementById('newCanvas');
+var stage = new createjs.Stage(canvas);
+					img = new Image ();
+					img.src = 'images/bubbles.png' ;
+					img.onload = function (event){
+					var data = {
+					framerate:10,
+					images: [img],
+					frames: {width:64, height:64, regX:32, regY:32},
+					animations: {
+					'explode': [0, 10],
+					}
+					}
+					var spritesheet = new createjs.SpriteSheet(data);
+					var animation = new createjs.Sprite(spritesheet, 'explode');
+					animation.x = canvas.width/2;
+					animation.y = canvas.height/2;
+					stage.addChild(animation);
+					createjs.Ticker.addEventListener("tick", update);
+					function update(event){
+					stage.update();
+					}
+					}
+					</script>
+    <script type="text/javascript">
+	/*  window.onload function use to perform task when the page finished loading, displaying a page to user input field as soon as the page is loaded, i use this for create a link allow them to logout at anytime navigation,  */
+    window.onload = function() {
+        var welcome = document.getElementById('welcome');
+        var userid = getCookie('welcomeuser');
+        if (userid != null && userid != '') {
+            var login = document.getElementById('login');
+            login.text = 'Logout';
+            login.onclick  = function() { 
+                document.cookie = 'welcomeuser=';
+                return true;
+             };
+            login.href = 'index.html';
+            welcome.style.display = '';
+            welcome.text = "Welcome " + userid;
+        } else {
+            welcome.style.display = 'none';
+            
+        }
+
+    }
+/* Create a function that return the value of a specified cookie, if the cookie is found, return the value of the cookie, if the cookie is not found, return""  */
+    function getCookie(c_name) {
+        if (document.cookie.length > 0) {
+            c_start = document.cookie .indexOf(c_name + "=");
+            if (c_start != -1) {
+                c_start = c_start + c_name.length + 1;
+                c_end = document.cookie.indexOf(";", c_start);
+                if (c_end == -1) c_end = document.cookie.length;
+                return unescape(document.cookie.substring(c_start, c_end));
+            }
+        }
+        return "";
+    }
+    </script>
+</body>
+
+</html>

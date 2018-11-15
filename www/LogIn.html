@@ -1,0 +1,192 @@
+ <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> ADA Austraian Design Architects </title>
+    <meta name="Trang" content="      meijinguyen2512@gmail.com     ">
+    <link rel="stylesheet" href="aboutus.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+    <script type="text/javascript">
+	/* validate the form on login page. Form validation used to occur at the server, after client entered all the data and press the submit button, if the data entered was incorrect or was missing, the server would have send data back to the client and request the form be resubmitted. the form must be checked to make sure all the field are filled in. if a form field is empty, this function alerts a message, and return false. Create a function that stores the name of the visitor in a cookie  */ 
+    function validate() {
+
+        var username = document.getElementById('userid').value;
+        var password = document.getElementById('password').value;
+        var minLength = 6;
+
+
+
+        if (username == '') {
+            alert("You must enter a username.");
+            return false;
+        }
+
+        if (password.length < 6) {
+            alert("You must enter a password of atleast 6 characters.");
+            return false;
+        }
+		//Set_Cookie('welcomeuser', username);
+
+        document.cookie = "welcomeuser=" + username;
+		
+        return true;
+    }
+    </script>
+    <script language="JavaScript">
+    function Get_Cookie(name) {
+        var start = document.cookie.indexOf(name + "=");
+        var len = start + name.length + 1;
+        if ((!start) && (name != document.cookie.substring(0, name.length))) return null;
+        if (start == -1) return null;
+        var end = document.cookie.indexOf(";", len);
+        if (end == -1) end = document.cookie.length;
+        return unescape(document.cookie.substring(len, end));
+    }
+    
+
+    function Set_Cookie(name, value, expires, path, domain, secure) {
+        document.cookie = name + "=" + escape(value) +
+            ((expires) ? ";expires=" + expires.toGMTString() : "") +
+            ((path) ? ";path=" + path : "") +
+            ((domain) ? ";domain=" + domain : "") +
+            ((secure) ? ";secure" : "");
+
+    }
+
+    var today = new Date();
+    var expires = new Date(today.getTime() + (20 * 86400000));
+
+    
+    </script>
+</head>
+
+<body onLoad="get()">
+    <div class="main-container">
+        <header>
+            <img src="images/ADAlogo.png" width="212" height="114" alt="GMC" class="logo" />
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">HOME</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html">PORTFOLIO</a>
+                    </li>
+                    <li>
+                        <a href="awards.html">AWARDS</a>
+                    </li>
+                    <li>
+                        <a href="aboutus.html">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="contactus.html">CONTACT US</a>
+                    </li>
+					<li>
+                        <a id='login' href="LogIn.html">LOG IN</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main id="login">
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>login</h1>
+            </div>
+        </div>
+		
+        <h3> ALREADY HAVE AN ACCOUNT?</h3>
+        <p>Welcome back! Sign in to your account below and remember, your login details are case sensitive</p>
+		
+        <form method="get" action="index.html" onSubmit="return validate();">
+            <form name="logonform" onSubmit="return get();">
+                <p>Username or Email&nbsp;:&nbsp;
+                    <input type="text" name="Username" id="userid" size="10"> </font>
+                </p>
+                <p> Password&nbsp;:&nbsp;&nbsp;
+                    <input type="text" name="Password" id="password" maxlength=7> </p>
+                    <BR>
+                    </br><p>remember me<input type="checkbox"></p>
+                    
+                    </font>
+                    <p>
+                        <input type=submit value="Submit" />
+                        <input type="reset" value="Reset" />
+                    </p>
+                
+            </form>
+			
+			
+    </main>
+    <footer>
+        <div id="footer1">
+            <aside id="footer-left">
+                <h3>MENU</h3>
+                <ul>
+                    <li><a href="ADA.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="awards.html">AWARDS</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="contactus.html">CONTACT US</a></li>
+					<li><a href="LogIn.html">LOG IN</a></li>
+                </ul>
+            </aside>
+            <aside id="footer-center">
+                <h3>Customer Reviews</h3>
+                <div class="rating">
+                    <span>&#9734;</span><span>&#9734;</span><span>&#9734;</span><span>&#9734;</span>
+                </div>
+                <canvas id="newCanvas" width="300" height="300">
+                    <img src="images/bubbles.png" width="150" height="150" alt="" />
+                </canvas>
+            </aside>
+            <aside id="footer-right">
+                <h3>GETTING SOCIAL</h3>
+                <ul class="contact">
+                    <li><a href="https://plus.google.com/discover"><img src="images/google-plus.png" alt="google-plus" width="34" height="34"></a></li>
+                    <li><a href="https://twitter.com/Twitter"><img src="images/twitter.png" alt="twitter" width="34" height="34"></a></li>
+                    <li><a href="twitter.com"><img src="images/pinterest.png" alt="pinterest" width="34" height="34"></a></li>
+                </ul>
+            </aside>
+        </div>
+        <div id="footer2">
+            Copyright &copy; 2017 ADA Australian Design Architects
+            <div class="privacyfooter">
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    <script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+    <script>
+    var canvas = document.getElementById('newCanvas');
+    var stage = new createjs.Stage(canvas);
+    img = new Image();
+    img.src = 'images/bubbles.png';
+    img.onload = function(event) {
+        var data = {
+            framerate: 10,
+            images: [img],
+            frames: { width: 64, height: 64, regX: 32, regY: 32 },
+            animations: {
+                'explode': [0, 10],
+            }
+        }
+        var spritesheet = new createjs.SpriteSheet(data);
+        var animation = new createjs.Sprite(spritesheet, 'explode');
+        animation.x = canvas.width / 2;
+        animation.y = canvas.height / 2;
+        stage.addChild(animation);
+        createjs.Ticker.addEventListener("tick", update);
+
+        function update(event) {
+            stage.update();
+        }
+    }
+    </script>
+</body>
+
+</html>
